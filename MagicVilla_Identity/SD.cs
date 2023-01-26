@@ -39,10 +39,24 @@ namespace MagicVilla_Identity
                 },
                 new Client
                 {
+                    ClientId = "angular_spa",
+                    ClientSecrets = { new Secret("secret".Sha256()) },
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowedScopes = { "magic", IdentityServerConstants.StandardScopes.OpenId },
+                    RedirectUris =
+                    {
+                        "http://localhost:4200/auth-callback",
+                        "http://localhost:4200/silent-refresh.html"
+                    },
+                    PostLogoutRedirectUris = { "http://localhost:4200/" },
+                    AllowAccessTokensViaBrowser = true,
+                },
+                new Client
+                {
                     ClientId = "magic",
                     ClientSecrets = { new Secret("secret".Sha256()) },
                     AllowedGrantTypes = GrantTypes.Code,
-                    AllowedScopes = { "magic", 
+                    AllowedScopes = { "magic",
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Email,
@@ -52,6 +66,5 @@ namespace MagicVilla_Identity
                     PostLogoutRedirectUris={"https://localhost:7002/signout-callback-oidc" },
                 }
             };
-        
     }
 }

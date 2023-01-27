@@ -2,6 +2,7 @@
 // See LICENSE in the project root for license information.
 
 
+using MagicVilla_Identity.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace UI.Pages.Login;
@@ -19,4 +20,6 @@ public class InputModel
     public string ReturnUrl { get; set; }
 
     public string Button { get; set; }
+
+    public AccountType AccountType { get; set;}
 }

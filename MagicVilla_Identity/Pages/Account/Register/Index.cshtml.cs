@@ -1,5 +1,5 @@
 using IdentityModel;
-using MagicVilla_Identity.Models;
+using MagicVilla_Identity.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

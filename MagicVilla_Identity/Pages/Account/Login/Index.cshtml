@@ -27,7 +27,11 @@
                                 <label asp-for="Input.Password"></label>
                                 <input type="password" class="form-control" placeholder="Password" asp-for="Input.Password" autocomplete="off">
                             </div>
-                            
+
+
+                            <select asp-for="Input.AccountType" asp-items="Html.GetEnumSelectList<MagicVilla_Identity.Models.Enums.AccountType>()">
+                                <option selected="selected" value="">Please select</option>
+                            </select>
                             @if (Model.View.AllowRememberLogin)
                             {
                                 <div class="form-group">

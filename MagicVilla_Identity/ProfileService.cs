@@ -2,7 +2,7 @@
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using IdentityModel;
-using MagicVilla_Identity.Models;
+using MagicVilla_Identity.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 
